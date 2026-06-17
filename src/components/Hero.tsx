@@ -1,61 +1,48 @@
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden text-white text-center px-6 py-24 md:py-36"
-      style={{
-        background: "linear-gradient(135deg, #0f2d6e 0%, #1a56db 60%, #0d9e75 100%)",
-      }}
-    >
-      {/* subtle dot pattern */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #fff 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-        }}
-      />
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-5 sm:px-8 pt-14 bg-white overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,113,227,0.07),transparent)]" />
 
       <div className="relative max-w-4xl mx-auto">
-        <span className="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white px-4 py-1.5 rounded-full text-xs font-semibold mb-6 uppercase tracking-wide">
-          ✨ Trusted Cleaning Professionals — United Kingdom
-        </span>
-
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-5">
-          We Leave Every Space{" "}
-          <span className="text-emerald-300">Spotless &amp; Fresh</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
-          Professional, reliable cleaning services for homes and businesses
-          across the UK. Attention to detail, every single time.
+        <p className="text-[13px] font-semibold tracking-widest text-[#0071e3] uppercase mb-6">
+          Professional Cleaning — United Kingdom
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <h1 className="text-[48px] sm:text-[64px] md:text-[80px] font-bold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f] mb-6">
+          Every space,{" "}
+          <span className="text-[#0071e3]">spotless.</span>
+        </h1>
+
+        <p className="text-[19px] sm:text-[21px] text-[#6e6e73] max-w-xl mx-auto leading-relaxed mb-10 font-light">
+          Reliable cleaning services for homes and businesses across the UK.
+          Attention to detail, every single time.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#contact"
-            className="bg-white text-blue-700 hover:bg-blue-50 px-7 py-4 rounded-xl font-bold text-sm transition-colors"
+            className="w-full sm:w-auto bg-[#0071e3] hover:bg-[#0077ed] active:scale-[0.98] text-white text-[17px] font-semibold px-8 py-4 rounded-full transition-all duration-200"
           >
-            📋 Get a Free Quote
+            Get a free quote
           </a>
           <a
             href="tel:07919936046"
-            className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-7 py-4 rounded-xl font-semibold text-sm transition-colors"
+            className="w-full sm:w-auto border border-[#d2d2d7] hover:border-[#0071e3] text-[#1d1d1f] hover:text-[#0071e3] text-[17px] font-semibold px-8 py-4 rounded-full transition-all duration-200"
           >
-            📞 07919 936046
+            07919 936046
           </a>
         </div>
 
-        <div className="flex flex-wrap gap-10 justify-center mt-16">
+        <div className="mt-20 grid grid-cols-3 gap-8 sm:gap-16 border-t border-[#f5f5f7] pt-12">
           {[
-            { num: "100%", label: "Satisfaction Guaranteed" },
-            { num: "6+", label: "Service Types" },
-            { num: "⭐ 5-Star", label: "Rated Service" },
+            { num: "6+", label: "Service types" },
+            { num: "100%", label: "Satisfaction guaranteed" },
+            { num: "5★", label: "Rated by clients" },
           ].map(({ num, label }) => (
-            <div key={label} className="text-center">
-              <div className="text-3xl font-bold">{num}</div>
-              <div className="text-white/60 text-xs mt-1">{label}</div>
+            <div key={label}>
+              <div className="text-[32px] sm:text-[40px] font-bold tracking-tight text-[#1d1d1f]">{num}</div>
+              <div className="text-[13px] sm:text-[15px] text-[#6e6e73] mt-1">{label}</div>
             </div>
           ))}
         </div>

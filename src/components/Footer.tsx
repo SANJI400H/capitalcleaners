@@ -2,76 +2,49 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white/70 pt-16 pb-8 px-6">
+    <footer className="bg-[#f5f5f7] border-t border-black/8 px-5 sm:px-8 pt-16 pb-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-14">
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-base">
-                CC
-              </div>
-              <span className="text-white font-bold text-lg">
-                Capital <span className="text-blue-400">Cleaners</span>
-              </span>
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 bg-[#0071e3] rounded-lg flex items-center justify-center text-white font-bold text-xs">CC</div>
+              <span className="text-[15px] font-semibold text-[#1d1d1f] tracking-tight">Capital Cleaners</span>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Delivering reliable, high-quality cleaning services with attention to detail and customer satisfaction at the heart of everything we do.
+            <p className="text-[13px] text-[#6e6e73] leading-relaxed max-w-xs">
+              Delivering reliable, high-quality cleaning services across the UK with attention to detail and customer satisfaction.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold text-sm mb-5">Services</h4>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Domestic Cleaning",
-                "Office Cleaning",
-                "Deep Cleaning",
-                "End of Tenancy",
-                "Move-In / Move-Out",
-              ].map((s) => (
+            <p className="text-[12px] font-semibold text-[#1d1d1f] uppercase tracking-widest mb-4">Services</p>
+            <ul className="space-y-2.5">
+              {["Domestic Cleaning", "Office Cleaning", "Deep Cleaning", "End of Tenancy", "Move-In / Move-Out"].map((s) => (
                 <li key={s}>
-                  <a href="#services" className="text-white/50 hover:text-white transition-colors">
-                    {s}
-                  </a>
+                  <a href="#services" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">{s}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold text-sm mb-5">Contact</h4>
-            <ul className="space-y-3 text-sm">
+            <p className="text-[12px] font-semibold text-[#1d1d1f] uppercase tracking-widest mb-4">Contact</p>
+            <ul className="space-y-2.5">
+              <li><a href="tel:07919936046" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">07919 936046</a></li>
+              <li><a href="mailto:capitalccleanersss@gmail.com" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">capitalccleanersss@gmail.com</a></li>
               <li>
-                <a href="tel:07919936046" className="text-white/50 hover:text-white transition-colors">
-                  📞 07919 936046
-                </a>
-              </li>
-              <li>
-                <a href="mailto:capitalccleanersss@gmail.com" className="text-white/50 hover:text-white transition-colors">
-                  ✉️ capitalccleanersss@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.tiktok.com/@capital_cleaners"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/50 hover:text-white transition-colors"
-                >
-                  🎵 @capital_cleaners
+                <a href="https://www.tiktok.com/@capital_cleaners" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">
+                  TikTok — @capital_cleaners
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Capital Cleaners. All rights reserved. United Kingdom.
+        <div className="border-t border-black/8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[12px] text-[#a1a1a6]">
+            © {new Date().getFullYear()} Capital Cleaners. All rights reserved.
           </p>
-          <span className="bg-white/10 border border-white/15 text-white/50 px-4 py-1.5 rounded-full text-xs">
-            🇬🇧 Serving the UK
-          </span>
+          <p className="text-[12px] text-[#a1a1a6]">🇬🇧 United Kingdom</p>
         </div>
       </div>
     </footer>

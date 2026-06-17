@@ -1,28 +1,25 @@
 export default function CtaBanner() {
   return (
-    <section
-      className="py-20 px-6 text-white text-center"
-      style={{ background: "linear-gradient(135deg, #0f2d6e, #1a56db)" }}
-    >
+    <section className="py-28 px-5 sm:px-8 bg-[#1d1d1f] text-white text-center">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready for a Spotless Space?
+        <h2 className="text-[40px] sm:text-[52px] font-bold tracking-[-0.02em] leading-tight mb-5">
+          Ready for a spotless space?
         </h2>
-        <p className="text-white/80 text-lg mb-10">
-          Contact us today for a free, no-obligation quote. Referrals are always greatly appreciated!
+        <p className="text-[19px] text-white/60 font-light mb-10 max-w-lg mx-auto">
+          Contact us today for a free, no-obligation quote. Referrals are always greatly appreciated.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="tel:07919936046"
-            className="bg-white text-blue-700 hover:bg-blue-50 px-7 py-4 rounded-xl font-bold text-sm transition-colors"
+            className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#1d1d1f] text-[17px] font-semibold px-8 py-4 rounded-full transition-colors"
           >
-            📞 Call 07919 936046
+            Call 07919 936046
           </a>
           <a
             href="mailto:capitalccleanersss@gmail.com"
-            className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-7 py-4 rounded-xl font-semibold text-sm transition-colors"
+            className="w-full sm:w-auto border border-white/20 hover:border-white/40 text-white text-[17px] font-semibold px-8 py-4 rounded-full transition-colors"
           >
-            ✉️ Email Us
+            Email us
           </a>
         </div>
       </div>
