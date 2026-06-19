@@ -18,13 +18,41 @@ const services = [
 ];
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    (e.target as HTMLFormElement).reset();
+    setStatus("loading");
+
+    const form = e.currentTarget;
+    const data = {
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
+      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+        setTimeout(() => setStatus("idle"), 6000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   }
 
   return (
@@ -73,6 +101,7 @@ export default function Contact() {
               <div>
                 <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">First name</label>
                 <input
+                  name="firstName"
                   type="text"
                   placeholder="Jane"
                   required
@@ -82,6 +111,7 @@ export default function Contact() {
               <div>
                 <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">Last name</label>
                 <input
+                  name="lastName"
                   type="text"
                   placeholder="Smith"
                   required
@@ -93,6 +123,7 @@ export default function Contact() {
             <div>
               <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">Email</label>
               <input
+                name="email"
                 type="email"
                 placeholder="jane@example.com"
                 required
@@ -103,6 +134,7 @@ export default function Contact() {
             <div>
               <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">Phone</label>
               <input
+                name="phone"
                 type="tel"
                 placeholder="07700 000000"
                 className="w-full bg-white border border-[#d2d2d7] focus:border-[#0071e3] focus:outline-none focus:ring-2 focus:ring-[#0071e3]/20 rounded-xl px-4 py-3 text-[15px] text-[#1d1d1f] placeholder:text-[#a1a1a6] transition-all"
@@ -112,6 +144,7 @@ export default function Contact() {
             <div>
               <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">Service</label>
               <select
+                name="service"
                 required
                 className="w-full bg-white border border-[#d2d2d7] focus:border-[#0071e3] focus:outline-none focus:ring-2 focus:ring-[#0071e3]/20 rounded-xl px-4 py-3 text-[15px] text-[#1d1d1f] transition-all"
               >
@@ -123,6 +156,7 @@ export default function Contact() {
             <div>
               <label className="block text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide mb-2">Message</label>
               <textarea
+                name="message"
                 rows={3}
                 placeholder="Tell us about your property or preferred dates…"
                 className="w-full bg-white border border-[#d2d2d7] focus:border-[#0071e3] focus:outline-none focus:ring-2 focus:ring-[#0071e3]/20 rounded-xl px-4 py-3 text-[15px] text-[#1d1d1f] placeholder:text-[#a1a1a6] transition-all resize-none"
@@ -131,14 +165,20 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-[#0071e3] hover:bg-[#0077ed] active:scale-[0.98] text-white text-[15px] font-semibold py-4 rounded-xl transition-all"
+              disabled={status === "loading"}
+              className="w-full bg-[#0071e3] hover:bg-[#0077ed] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed text-white text-[15px] font-semibold py-4 rounded-xl transition-all"
             >
-              Send enquiry
+              {status === "loading" ? "Sending…" : "Send enquiry"}
             </button>
 
-            {submitted && (
+            {status === "success" && (
               <p className="text-center text-[14px] text-[#34c759] font-medium">
                 ✓ Thank you — we&apos;ll be in touch shortly.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-center text-[14px] text-[#ff3b30] font-medium">
+                Something went wrong — please try again or email us directly.
               </p>
             )}
           </form>
