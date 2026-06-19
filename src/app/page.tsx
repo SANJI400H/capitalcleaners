@@ -23,7 +23,6 @@ const Gallery = dynamic(() => import("@/components/Gallery"), {
       />
     </section>
   ),
-  ssr: false,
 });
 
 const jsonLd = {
