@@ -1,11 +1,11 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const RECIPIENT = "capitalccleanersss@gmail.com";
 
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const { firstName, lastName, email, phone, service, message } =
       await request.json();
