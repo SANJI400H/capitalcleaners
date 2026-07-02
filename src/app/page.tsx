@@ -8,6 +8,7 @@ import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import TikTokFloat from "@/components/TikTokFloat";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Gallery = dynamic(() => import("@/components/Gallery"), {
   loading: () => (
@@ -114,6 +115,7 @@ export default function Home() {
       </main>
       <Footer />
       <TikTokFloat />
+      <WhatsAppFloat />
     </>
   );
 }
