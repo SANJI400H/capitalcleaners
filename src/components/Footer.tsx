@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,9 +7,14 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-14">
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-[#0071e3] rounded-lg flex items-center justify-center text-white font-bold text-xs">CC</div>
-              <span className="text-[15px] font-semibold text-[#1d1d1f] tracking-tight">Capital Cleaners</span>
+            <Link href="/" className="inline-flex mb-4" aria-label="Capital Cleaners home">
+              <Image
+                src="/logo.png"
+                alt="Capital Cleaners logo"
+                width={140}
+                height={56}
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-[13px] text-[#6e6e73] leading-relaxed max-w-xs">
               Professional cleaning services across the UK. Domestic, office, deep cleaning, end of tenancy and more. Fully insured, vetted team, eco-friendly products, and free quotes.

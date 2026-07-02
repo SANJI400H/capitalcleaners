@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { label: "Services", href: "#services" },
@@ -56,13 +57,15 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-14">
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="Capital Cleaners — home">
-            <div className="w-8 h-8 bg-[#0071e3] rounded-lg flex items-center justify-center text-white font-bold text-xs tracking-tight select-none">
-              CC
-            </div>
-            <span className="text-[15px] font-semibold text-[#1d1d1f] tracking-tight">
-              Capital Cleaners
-            </span>
+          <Link href="/" className="flex items-center" aria-label="Capital Cleaners home">
+            <Image
+              src="/logo.png"
+              alt="Capital Cleaners logo"
+              width={120}
+              height={48}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <ul className="hidden md:flex items-center gap-7 list-none m-0 p-0">
