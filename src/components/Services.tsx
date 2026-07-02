@@ -3,7 +3,7 @@ const services = [
     icon: "🏠",
     title: "Domestic Cleaning",
     description:
-      "Regular home cleaning tailored to your schedule. Kitchens, bathrooms, bedrooms — everything kept pristine. Weekly, fortnightly, or one-off cleans available.",
+      "Regular home cleaning tailored to your schedule. Kitchens, bathrooms, bedrooms. Everything kept pristine. Weekly, fortnightly, or one-off cleans available.",
     tag: "Most popular",
   },
   {
@@ -31,14 +31,14 @@ const services = [
     icon: "🔑",
     title: "End of Tenancy",
     description:
-      "Our comprehensive end-of-tenancy clean meets landlord and letting agency standards — giving you the best chance of getting your full deposit back.",
+      "Our comprehensive end-of-tenancy clean meets landlord and letting agency standards, giving you the best chance of getting your full deposit back.",
     tag: "Deposit guarantee",
   },
   {
     icon: "🏗️",
     title: "General Property",
     description:
-      "Flexible residential and commercial property cleaning — communal areas, vacant units, shared spaces, and anywhere that needs a professional clean.",
+      "Flexible residential and commercial property cleaning. Communal areas, vacant units, shared spaces and anywhere that needs a professional touch.",
     tag: null,
   },
 ];
@@ -53,7 +53,7 @@ export default function Services() {
             Our cleaning services
           </h2>
           <p className="text-[17px] text-[#6e6e73] mt-4 font-light max-w-xl mx-auto">
-            Professional cleaning solutions for homes and businesses across the UK — all at affordable, transparent prices.
+            Professional cleaning solutions for homes and businesses across the UK, all at affordable, transparent prices.
           </p>
         </div>
 

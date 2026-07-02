@@ -9,19 +9,19 @@ const reasons = [
     icon: "✦",
     title: "Fully insured & vetted",
     description:
-      "Every member of our team is fully vetted and we carry comprehensive insurance — so you can book with complete peace of mind.",
+      "Every member of our team is fully vetted and we carry comprehensive insurance, so you can book with complete peace of mind.",
   },
   {
     icon: "✦",
     title: "Eco-friendly products",
     description:
-      "We use eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment — without sacrificing results.",
+      "We use eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment. No compromises on results.",
   },
   {
     icon: "✦",
     title: "Transparent, affordable pricing",
     description:
-      "No hidden fees or surprises. Clear, affordable quotes upfront — and free, no-obligation estimates for every job.",
+      "No hidden fees or surprises. Clear, affordable quotes upfront and free, no-obligation estimates for every job.",
   },
 ];
 
@@ -30,7 +30,7 @@ const reviews = [
     initials: "JM",
     name: "James M.",
     role: "Office Manager, London",
-    text: "Absolutely brilliant service — our office has never looked this clean. Would highly recommend Capital Cleaners to anyone.",
+    text: "Absolutely brilliant service. Our office has never looked this clean. Would highly recommend Capital Cleaners to anyone.",
   },
   {
     initials: "SR",
@@ -56,7 +56,7 @@ export default function WhyUs() {
             A cleaning company you can depend on
           </h2>
           <p className="text-[17px] text-[#6e6e73] mt-4 font-light max-w-xl mx-auto">
-            Vetted, insured, and 5-star rated — Capital Cleaners is the reliable choice for professional cleaning services near you.
+            Vetted, insured, and 5-star rated. Capital Cleaners is the reliable choice for professional cleaning services near you.
           </p>
         </div>
 

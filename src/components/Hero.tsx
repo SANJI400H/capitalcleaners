@@ -17,7 +17,7 @@ export default function Hero() {
         {/* Eyebrow badge */}
         <div className="inline-flex items-center gap-2 bg-[#0071e3]/8 border border-[#0071e3]/15 text-[#0071e3] text-[12px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#0071e3] animate-pulse" aria-hidden="true" />
-          Professional Cleaning Services — United Kingdom
+          Professional Cleaning Services · United Kingdom
         </div>
 
         <h1 className="text-[48px] sm:text-[64px] md:text-[80px] font-bold leading-[1.05] tracking-[-0.03em] text-[#1d1d1f] mb-6">
@@ -29,8 +29,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-[19px] sm:text-[21px] text-[#6e6e73] max-w-xl mx-auto leading-relaxed mb-10 font-light">
-          Trusted domestic &amp; commercial cleaning services across the UK —
-          deep cleaning, end of tenancy, office cleaning &amp; more. Vetted, insured, and free quotes always.
+          Trusted domestic and commercial cleaning services across the UK. Deep cleaning, end of tenancy, office cleaning and more. Vetted, insured, and always free to quote.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

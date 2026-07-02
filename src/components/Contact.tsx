@@ -64,7 +64,7 @@ export default function Contact() {
             Let&apos;s get started
           </h2>
           <p className="text-[17px] text-[#6e6e73] mt-4 font-light">
-            Reach out — we&apos;ll get back to you promptly.
+            Reach out and we&apos;ll get back to you promptly.
           </p>
         </div>
 
@@ -173,12 +173,12 @@ export default function Contact() {
 
             {status === "success" && (
               <p className="text-center text-[14px] text-[#34c759] font-medium">
-                ✓ Thank you — we&apos;ll be in touch shortly.
+                ✓ Thank you, we&apos;ll be in touch shortly.
               </p>
             )}
             {status === "error" && (
               <p className="text-center text-[14px] text-[#ff3b30] font-medium">
-                Something went wrong — please try again or email us directly.
+                Something went wrong. Please try again or email us directly.
               </p>
             )}
           </form>

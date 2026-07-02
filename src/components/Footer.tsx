@@ -11,7 +11,7 @@ export default function Footer() {
               <span className="text-[15px] font-semibold text-[#1d1d1f] tracking-tight">Capital Cleaners</span>
             </Link>
             <p className="text-[13px] text-[#6e6e73] leading-relaxed max-w-xs">
-              Professional cleaning services across the UK — domestic, office, deep cleaning, end of tenancy &amp; more. Fully insured, vetted team, eco-friendly products, and free quotes.
+              Professional cleaning services across the UK. Domestic, office, deep cleaning, end of tenancy and more. Fully insured, vetted team, eco-friendly products, and free quotes.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
               <li><a href="mailto:capitalccleanersss@gmail.com" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">capitalccleanersss@gmail.com</a></li>
               <li>
                 <a href="https://www.tiktok.com/@capital_cleaners" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">
-                  TikTok — @capital_cleaners
+                  TikTok: @capital_cleaners
                 </a>
               </li>
             </ul>
@@ -44,7 +44,7 @@ export default function Footer() {
           <p className="text-[12px] text-[#a1a1a6]">
             © {new Date().getFullYear()} Capital Cleaners. All rights reserved.
           </p>
-          <p className="text-[12px] text-[#a1a1a6]">🇬🇧 Professional Cleaning Services — United Kingdom</p>
+          <p className="text-[12px] text-[#a1a1a6]">🇬🇧 Professional Cleaning Services · United Kingdom</p>
         </div>
       </div>
     </footer>
